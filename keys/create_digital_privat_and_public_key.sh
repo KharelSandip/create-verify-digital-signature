@@ -7,10 +7,10 @@ read -p 'Enter a username for the key: ' USER_NAME
 
 # Generate a 2048-bit RSA private key and save it:
 
-openssl genpkey -algorithm RSA -out "${USER_NAME}"_privatekey.pem
+openssl genpkey -algorithm RSA -out "${USER_NAME}"_private_key.pem
 
 # Extract the public key from the private key and save it:
 
-openssl rsa -in "${USER_NAME}"_privatekey.pem -out "${USER_NAME}"_publickey.pem -pubout -outform PEM
+openssl rsa -in "${USER_NAME}"_private_key.pem -out "${USER_NAME}"_public_key.pem -pubout -outform PEM
 
 
